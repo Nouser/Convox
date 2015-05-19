@@ -1,0 +1,56 @@
+﻿<!--Copyright (c) 2012 Microsoft Corporation.  All rights reserved. 
+    Use of this sample source code is subject to the terms of the Microsoft license  
+    agreement under which you licensed this sample source code and is provided AS-IS. 
+    If you did not accept the terms of the license agreement, you are not authorized  
+    to use this sample source code.  For the terms of the license, please see the  
+    license agreement between you and Microsoft.-->
+
+<Page  
+    x:Class="VoiceTranslatorAppCS.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VoiceTranslatorAppCS"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sp="using:Bing.Speech.Xaml"
+    xmlns:Translator="using:Bing.Translator"
+    mc:Ignorable="d" Width="1920" Height="1081">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <sp:SpeechRecognizerUx x:Name="SpeechControl" />
+        <sp:SpeechRecognizerUx x:Name="SpeechControlEN" />
+        <sp:SpeechRecognizerUx x:Name="SpeechControlES" />
+        <sp:SpeechRecognizerUx x:Name="SpeechControlDE" />
+        <sp:SpeechRecognizerUx x:Name="SpeechControlFR" />
+        <CaptureElement Name="capturePreview" Stretch="Fill" Canvas.ZIndex="-5" />
+        <TextBlock                                                                                  Margin="15,543,0,500" Width="500" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Left" >
+            Select what language to translate to
+        </TextBlock>
+        <AppBarButton x:Name="SpeakButton" Click="SpeakButton_Click" Icon="Microphone"              Margin="403,565,0,0" ></AppBarButton>
+        <ComboBox x:Name="VoiceList"                                                                Margin="10,586,0,0" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <CheckBox x:Name="ShowAlternatesBox" Content="Show speech results before translating" Visibility="Collapsed"       Margin="10,350" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBlock x:Name="AlternatesText"                                                          Margin="10,390,10,350" FontSize="16" Visibility="Collapsed">
+            What did you mean to say?
+        </TextBlock>
+        <ComboBox x:Name="AlternatesList" SelectionChanged="AlternatesList_SelectionChanged"        Margin="10,420,0,0" Width="120" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TextBlock x:Name="ErrorBox"                                                                Margin="10,420,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Translator:TranslatorControl x:Name="Trans" LanguageFrom="en-US"  />
+        <MediaElement x:Name="TTS" AutoPlay="True" Canvas.ZIndex="-2" />
+
+        <ComboBox x:Name="FromList"                                                                Margin="10,476,0,0" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" AllowDrop="True"/>
+        <TextBlock                                                                                  Margin="15,425,0,632" Width="500" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Left" Height="24" >
+            Select the language you are translating from.
+        </TextBlock>
+        <Border Background="Black" Width="420" Height="50" Margin="0,415,1480,616" Canvas.ZIndex="-3">
+            <TextBlock Margin="-4,109,4,-109"/>
+        </Border>
+        <Border Background="Black" Margin="653,900,658,97" Canvas.ZIndex="-1"/>
+        <TextBlock x:Name="TranslatedText"                                                       TextAlignment="Center"                           Margin="608,900,627,97" Width="685" FontSize="20" TextWrapping="Wrap" HorizontalAlignment="Center" >
+            The text in the selected language is:
+        </TextBlock>
+        <Border Background="Black" Width="380" Height="50" Margin="15,524,1580,507" Canvas.ZIndex="-3">
+            <TextBlock Margin="-4,109,4,-109"/>
+        </Border>
+    </Grid>
+</Page>

@@ -1,0 +1,13 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\users\matt\downloads\speech rec\c#\voicetranslatorappcs\obj\x86\debug\intermediatexaml\voicetranslatorappcs.exe" HashGuid="e8e80cf8-c49c-f9ec-0505-608699fc4007" />
+    <ReferenceAssembly PathName="c:\users\matt\appdata\local\microsoft sdks\windows\v8.1\extensionsdks\bing.translator\1.1\references\commonconfiguration\neutral\bing.controls.authenticationaccesstoken.winmd" HashGuid="b050873d-50d2-af24-94cd-ad1e4aa5042b" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\bing.speech\1.1\references\commonconfiguration\x86\bing.speech.winmd" HashGuid="be9794d0-c314-ee1b-b040-fb023d2cb732" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\bing.speech\1.1\references\commonconfiguration\x86\bing.speech.xaml.speechrecognizerux.dll" HashGuid="fed7b53d-298a-c2a2-8ee4-cdebe25d03cb" />
+    <ReferenceAssembly PathName="c:\users\matt\appdata\local\microsoft sdks\windows\v8.1\extensionsdks\bing.translator\1.1\references\commonconfiguration\neutral\bing.translator.winmd" HashGuid="519c91c2-3893-d268-fbdc-efcff27b368c" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\bing.speech\1.1\references\commonconfiguration\x86\microsoft.bing.platform.logging.clientwinrt.dll" HashGuid="cbe0608d-cd4c-6784-1ae4-39012e8f6612" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\bing.speech\1.1\references\commonconfiguration\x86\microsoft.speech.voiceservice.audio.winmd" HashGuid="31e816d9-de92-911f-9736-c03382b1d675" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\bing.speech\1.1\references\commonconfiguration\x86\microsoft.speech.voiceservice.mssraudio.winmd" HashGuid="31af4e04-488e-c9c0-e19e-64d746b95264" />
+    <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

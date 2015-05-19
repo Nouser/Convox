@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Bing.Controls.AuthenticationAccessToken</name>
+    </assembly>
+    <members>
+        <member name="T:Bing.Controls.AuthenticationAccessToken.AccessToken">
+            <summary>
+            Token released by an authorization service to access a specific resource.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.AccessToken.Token">
+            <summary>
+            Gets or sets the string representation of the token.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.AccessToken.TokenType">
+            <summary>
+            Gets or sets the kind of token.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.AccessToken.ExpiresIn">
+            <summary>
+            Gets or sets the expiration of this token.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.AccessToken.Scope">
+            <summary>
+            Gets or sets the scope of validity of the token.
+            </summary>
+        </member>
+        <member name="T:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication">
+            <summary>
+            Class to access the authentication service and get a token for a given user.
+            </summary>
+        </member>
+        <member name="F:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.AccessTokenDurationInMinutes">
+            <summary>
+            The access token duration time in minutes.
+            Azure Data Market gives 10 min so here we try to cautious with 8min
+            just in case there is slightly time difference.
+            </summary>
+        </member>
+        <member name="M:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Initialize a new instance of ControlsAuthentication.
+            </summary>
+            <param name="clientId">The client id.</param>
+            <param name="clientSecret">The client secret.</param>
+            <param name="scope">The authentication's scope.</param>
+            <param name="authenticationUrl">The authentication url.</param>
+        </member>
+        <member name="M:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.GetAccessTokenAsync">
+            <summary>
+            Asynchronous method to get the access token without blocking the thread which makes the call.
+            </summary>
+            <returns>A string of access token.</returns>
+        </member>
+        <member name="M:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.GetAccessTokenTaskAsync">
+            <summary>
+            Asynchronous method to get the access token without blocking the thread which makes the call.
+            </summary>
+            <returns>A string of access token.</returns>
+        </member>
+        <member name="M:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.GetAccessToken">
+            <summary>
+            Synchronous method to get the access token.
+            Re-use the asynchronous method with Task.Wait to avoid duplicate code
+            </summary>
+            <returns>A string of access token.</returns>
+        </member>
+        <member name="M:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.IsAccessTokenExpired">
+            <summary>
+            Check if the previously obtained token expires or not.
+            </summary>
+            <returns>A boolean to indicate if it's expired.</returns>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.ClientId">
+            <summary>
+            Gets or sets the Id of the client that needs authentication.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.ClientSecret">
+            <summary>
+            Gets or sets the secret for the client.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.Scope">
+            <summary>
+            Gets or sets the authentication's scope.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.AuthenticationUrl">
+            <summary>
+            Gets or sets the authentication url.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.CachedToken">
+            <summary>
+            Gets or sets the cached copy of the access token.
+            </summary> 
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.TokenExpirationTime">
+            <summary>
+            Gets or sets the time stamp for the cached token.
+            </summary>
+        </member>
+        <member name="P:Bing.Controls.AuthenticationAccessToken.ControlsAuthentication.AuthenticationRequest">
+            <summary>
+            Gets or sets the byte array for the authentication request.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1 @@
+C:\Users\Matt\Downloads\Speech Rec\C#\VoiceTranslatorAppCS\VoiceTranslatorAppCS.csproj;x86
